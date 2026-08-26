@@ -1,5 +1,21 @@
 # Einführung in das Internet of Things (IoT)
 
+## Inhaltsverzeichnis
+
+1. [Was ist IoT?](#1-was-ist-iot)
+2. [Warum boomt das Internet of Things?](#2-warum-boomt-das-internet-of-things)
+3. [Verbraucher-IoT und industrielles IoT](#3-verbraucher-iot-und-industrielles-iot)
+4. [Vorteile von IoT](#4-vorteile-von-iot)
+5. [Typische IoT-Märkte](#5-typische-iot-märkte)
+6. [Geschichte des IoT](#6-geschichte-des-iot)
+7. [Der Begriff Internet of Things](#7-der-begriff-internet-of-things)
+8. [Sensoren als Grundlage des IoT](#8-sensoren-als-grundlage-des-iot)
+9. [GPS als Beispiel für die IoT-Entwicklung](#9-gps-als-beispiel-für-die-iot-entwicklung)
+10. [Zukunft des IoT](#10-zukunft-des-iot)
+11. [Chancen und Risiken](#11-chancen-und-risiken)
+12. [Persönliche Einschätzung zur Zukunft von IoT](#12-persönliche-einschätzung-zur-zukunft-von-iot)
+13. [Kurzfassung zum Lernen](#kurzfassung-zum-lernen)
+
 ## 1. Was ist IoT?
 
 **IoT (Internet of Things / Internet der Dinge)** bezeichnet die Vernetzung von physischen Geräten, Maschinen und Sensoren über Netzwerke.
