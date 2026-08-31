@@ -19,48 +19,12 @@
 
 ---
 
-<a id="kapitel-1"></a>
-## 1. Was ist ein IoT-Element?
-
-Ein **IoT-Element** ist ein physisches Gerät, das Daten aus seiner Umgebung erfasst oder etwas in der Umgebung bewirkt und über ein Netzwerk kommunizieren kann.
-
-Typische Bestandteile:
-
-1. **Sensor (Input)** – misst eine physikalische Grösse.
-2. **Mikrocontroller/Gateway** – liest Messwerte, verarbeitet sie und stellt die Netzwerkverbindung her.
-3. **Firmware** – das Programm auf dem Mikrocontroller.
-4. **Kommunikationsweg** – z. B. GPIO, I²C, SPI oder UART innerhalb des Geräts und WLAN ausserhalb des Geräts.
-5. **Netzwerkprotokoll** – z. B. TCP/IP, MQTT, HTTP oder NTP.
-6. **Server/Broker/Cloud/Edge-Service** – empfängt und verarbeitet Daten.
-7. **Speicherung und Benutzeroberfläche** – z. B. Datenbank und Home-Assistant-Dashboard.
-8. **Aktor (Output)** – führt eine physische Aktion aus.
-
-### Beispiel: Temperaturüberwachung
-
-```text
-Temperatur
-   ↓
-BME280-Sensor
-   ↓  I²C
-ESP32 + Firmware
-   ↓  WLAN / TCP-IP / MQTT
-MQTT-Broker oder Home Assistant
-   ↓
-Datenbank + Dashboard + Regel
-   ↓  MQTT
-ESP32
-   ↓  GPIO
-LED, Lüfter oder Relais
-```
-
-**Erfolgreiches Ergebnis:** Der Sensorwert erscheint nachvollziehbar im Dashboard. Wird ein definierter Grenzwert überschritten, erhält der Aktor einen Steuerbefehl und sein Zustand ist beobachtbar.
-
 ---
 
-<a id="kapitel-2"></a>
-## 2. Sensoren, Aktoren und Gateway
+<a id="kapitel-1"></a>
+## 1. Sensoren, Aktoren und Gateway
 
-## 2.1 Sensor
+## 1.1 Sensor
 
 Ein **Sensor** wandelt eine physikalische Grösse in ein elektrisches bzw. maschinenlesbares Signal um.
 
@@ -92,7 +56,7 @@ Wichtige Auswahlkriterien:
 
 Ein Sensor ist ein **Data Endpoint**, weil er Daten erzeugt.
 
-## 2.2 Aktor
+## 1.2 Aktor
 
 Ein **Aktor** wandelt ein elektrisches Signal in eine physikalische Wirkung um.
 
@@ -110,7 +74,7 @@ Beispiele:
 - Sensor: **physikalisch → elektrisch/digital**
 - Aktor: **elektrisch/digital → physikalisch**
 
-## 2.3 Gateway/Mikrocontroller
+## 1.3 Gateway/Mikrocontroller
 
 Im Kurs übernehmen ESP8266 oder ESP32 die Rolle des Controllers beziehungsweise Gateways. Sie können:
 
@@ -144,10 +108,10 @@ In realen Systemen wird oft beides kombiniert: **sicherheitskritische Reaktion l
 
 ---
 
-<a id="kapitel-3"></a>
-## 3. Umgebungssensoren aus dem Kurs
+<a id="kapitel-2"></a>
+## 2. Umgebungssensoren aus dem Kurs
 
-## 3.1 BMP280
+## 2.1 BMP280
 
 Misst:
 
@@ -169,7 +133,7 @@ Einsatz:
 - Wearables
 - mobile Geräte
 
-## 3.2 BME280
+## 2.2 BME280
 
 Misst:
 
@@ -188,7 +152,7 @@ Erkennung laut Unterlagen:
 
 Beim Kauf trotzdem immer Beschriftung und Datenblatt prüfen, weil Module teilweise falsch angeboten werden.
 
-## 3.3 BME680
+## 2.3 BME680
 
 Misst:
 
@@ -212,12 +176,12 @@ Besonderheit:
 
 ---
 
-<a id="kapitel-4"></a>
-## 4. ESP8266
+<a id="kapitel-3"></a>
+## 3. ESP8266
 
 Der ESP8266 ist ein günstiger 32-Bit-Mikrocontroller von Espressif mit integriertem 2,4-GHz-WLAN. Er eignet sich für kleinere IoT-Aufgaben.
 
-## 4.1 ESP-01
+## 3.1 ESP-01
 
 Eigenschaften:
 
@@ -227,7 +191,7 @@ Eigenschaften:
 - geeignet für einfache Aufgaben, z. B. einen Sensor oder ein Relais
 - zum komfortablen Flashen meist USB-Programmer nötig
 
-## 4.2 ESP-12 / Wemos D1 mini / NodeMCU
+## 3.2 ESP-12 / Wemos D1 mini / NodeMCU
 
 Der ESP-12 stellt deutlich mehr Pins bereit. Das nackte Modul hat ein Raster von ungefähr 2 mm und passt daher nicht direkt in ein Breadboard mit 2,54-mm-Raster. Entwicklerboards wie **Wemos D1 mini** oder **NodeMCU** lösen dieses Problem und ergänzen:
 
@@ -246,7 +210,7 @@ Kursangaben zum Wemos D1 mini:
 - WLAN als Client oder Access Point
 - Micro-USB am Entwicklungsboard
 
-## 4.3 ESP8266 und Deep Sleep
+## 3.3 ESP8266 und Deep Sleep
 
 WLAN benötigt im aktiven Betrieb relativ viel Strom. Für Batteriebetrieb soll der ESP deshalb nur kurz aufwachen:
 
@@ -269,7 +233,7 @@ Aufwecken:
 
 > Die reale Stromaufnahme hängt nicht nur vom ESP-Chip ab. Spannungsregler, Power-LED, USB-UART-Chip und Sensoren auf einem Development Board können im Deep Sleep weiterhin Strom verbrauchen.
 
-## 4.4 Wichtige ESP8266-Pins
+## 3.4 Wichtige ESP8266-Pins
 
 | Pin | Typische Funktion / Einschränkung |
 |---|---|
@@ -290,8 +254,8 @@ Aufwecken:
 
 ---
 
-<a id="kapitel-5"></a>
-## 5. ESP32
+<a id="kapitel-4"></a>
+## 4. ESP32
 
 Der klassische ESP32 ist der leistungsfähigere Nachfolger des ESP8266.
 
@@ -312,7 +276,7 @@ Eigenschaften aus den Kursunterlagen:
 
 > Der Chip besitzt viele interne GPIO-Signale, aber **nicht alle sind auf jedem Board herausgeführt oder frei verwendbar**. Board-Pinout und ESP32-Variante müssen zum Programm passen.
 
-## 5.1 ESP32 gegenüber ESP8266
+## 4.1 ESP32 gegenüber ESP8266
 
 | Merkmal | ESP8266 | klassischer ESP32 |
 |---|---|---|
@@ -325,7 +289,7 @@ Eigenschaften aus den Kursunterlagen:
 | Touch | nein | mehrere kapazitive Touch-Pins |
 | typische Nutzung | kleine/günstige WLAN-Aufgaben | komplexere IoT-Aufgaben, BLE, mehr Sensoren |
 
-## 5.2 Wichtige Sicherheit
+## 4.2 Wichtige Sicherheit
 
 - ESP32-GPIO arbeitet mit **3,3-V-Logik**.
 - Ein GPIO darf nicht einfach mit 5 V belastet werden.
@@ -337,8 +301,8 @@ Eigenschaften aus den Kursunterlagen:
 
 ---
 
-<a id="kapitel-6"></a>
-## 6. GPIO
+<a id="kapitel-5"></a>
+## 5. GPIO
 
 **GPIO** bedeutet **General Purpose Input/Output**. Ein GPIO-Pin kann durch die Firmware für unterschiedliche Aufgaben konfiguriert werden.
 
@@ -354,7 +318,7 @@ Mögliche Rollen:
 
 Nicht jeder Pin unterstützt jede Funktion.
 
-## 6.1 Digital und analog
+## 5.1 Digital und analog
 
 ### Digital
 
@@ -369,7 +333,7 @@ Ein digitaler Eingang misst nicht den genauen Spannungswert, sondern ordnet ihn 
 
 Ein analoges Signal kann innerhalb eines Bereichs viele kontinuierliche Spannungswerte annehmen. Ein ADC übersetzt die Spannung in eine Zahl.
 
-## 6.2 Pull-up und Pull-down
+## 5.2 Pull-up und Pull-down
 
 Ein unbeschalteter Eingang kann **floaten** und zufällige Werte liefern.
 
@@ -385,7 +349,7 @@ Taster gedrückt und mit GND verbunden → LOW
 
 Die Logik ist dann **active LOW**.
 
-## 6.3 ADC – Analog to Digital Converter
+## 5.3 ADC – Analog to Digital Converter
 
 Der klassische ESP32 besitzt laut Kurs 18 ADC-fähige Eingänge mit nominell 12 Bit Auflösung.
 
@@ -407,7 +371,7 @@ Wichtig:
 - bei genauer Messung kalibrieren und mehrere Werte mitteln
 - konkrete Eingangsbereiche hängen von ADC-Attenuation und Chipvariante ab
 
-## 6.4 DAC – Digital to Analog Converter
+## 5.4 DAC – Digital to Analog Converter
 
 Beim klassischen ESP32:
 
@@ -417,7 +381,7 @@ Beim klassischen ESP32:
 
 Ein DAC erzeugt eine echte abgestufte Ausgangsspannung. Er kann beispielsweise einfache Audiosignale oder Sollspannungen liefern, aber nur mit begrenzter Ausgangsleistung.
 
-## 6.5 PWM – Pulse Width Modulation
+## 5.5 PWM – Pulse Width Modulation
 
 PWM schaltet einen digitalen Ausgang sehr schnell zwischen LOW und HIGH. Über das Verhältnis von Ein-Zeit zu Gesamtperiode entsteht eine mittlere Wirkung.
 
@@ -438,7 +402,7 @@ PWM ist **kein echter DAC**: Das Signal bleibt digital und pulsiert.
 
 Beim ESP32 sind die reinen Eingangspins `GPIO34` bis `GPIO39` nicht als PWM-Ausgänge verwendbar.
 
-## 6.6 Interrupt
+## 5.6 Interrupt
 
 Ein Interrupt reagiert auf ein Ereignis am Eingang, ohne dass die Hauptschleife den Pin ständig abfragen muss.
 
@@ -460,7 +424,7 @@ Regeln für Interrupt Service Routines:
 - gemeinsam verwendete Daten korrekt schützen
 - mechanische Taster entprellen
 
-## 6.7 Touch-Pins
+## 5.7 Touch-Pins
 
 Der klassische ESP32 besitzt kapazitive Touch-Eingänge. Sie erkennen Änderungen der elektrischen Kapazität, zum Beispiel durch einen Finger.
 
@@ -478,7 +442,7 @@ Fehlerquellen:
 - falscher Schwellwert
 - unbeabsichtigtes Auslösen
 
-## 6.8 Hall-Sensor
+## 5.8 Hall-Sensor
 
 Der klassische ESP32 enthält laut Unterlagen einen Hall-Sensor zur Erkennung von Magnetfeldern.
 
@@ -492,8 +456,8 @@ Mögliche Anwendungen:
 
 ---
 
-<a id="kapitel-7"></a>
-## 7. I²C-Bus
+<a id="kapitel-6"></a>
+## 6. I²C-Bus
 
 **I²C** steht für **Inter-Integrated Circuit** und wurde von Philips entwickelt.
 
@@ -507,7 +471,7 @@ Zusätzlich benötigt die Schaltung:
 - gemeinsame Masse `GND`
 - passende Versorgung `VCC`
 
-## 7.1 Eigenschaften
+## 6.1 Eigenschaften
 
 - synchron: `SCL` liefert den Takt
 - adressierter Bus
@@ -517,7 +481,7 @@ Zusätzlich benötigt die Schaltung:
 - 7-Bit-Adressierung: theoretisch 128 Kombinationen, aber einige sind reserviert; häufig werden 112 nutzbare Adressen genannt
 - Bosch-Sensoren verwenden häufig `0x76` oder `0x77`
 
-## 7.2 Pull-up-Widerstände
+## 6.2 Pull-up-Widerstände
 
 `SDA` und `SCL` sind Open-Drain/Open-Collector-Leitungen. Teilnehmer ziehen die Leitung aktiv auf LOW; HIGH entsteht über Pull-up-Widerstände.
 
@@ -527,7 +491,7 @@ Typischer Kurswert:
 
 > **Wichtige Korrektur zur Folie:** I²C benötigt elektrisch Pull-ups. Interne Pull-ups können vorhanden sein, sind aber oft zu schwach. Viele Breakout-Boards besitzen bereits externe Pull-ups. Zu viele parallele Pull-ups können den Gesamtwiderstand wiederum zu klein machen.
 
-## 7.3 Ablauf einer Übertragung
+## 6.3 Ablauf einer Übertragung
 
 1. Bus ist frei: `SDA` und `SCL` HIGH.
 2. Controller erzeugt **START**.
@@ -537,7 +501,7 @@ Typischer Kurswert:
 6. Empfänger bestätigt Bytes mit ACK oder beendet mit NACK.
 7. Controller erzeugt **STOP**.
 
-## 7.4 Typische Fehler
+## 6.4 Typische Fehler
 
 - `SDA` und `SCL` vertauscht
 - kein gemeinsames `GND`
@@ -553,8 +517,8 @@ Typischer Kurswert:
 
 ---
 
-<a id="kapitel-8"></a>
-## 8. SPI-Bus
+<a id="kapitel-7"></a>
+## 7. SPI-Bus
 
 **SPI** steht für **Serial Peripheral Interface** und wurde von Motorola entwickelt.
 
@@ -567,7 +531,7 @@ Signale:
 
 > Im Kurs steht teilweise `SCL`; bei SPI ist die übliche Bezeichnung **`SCLK` oder `SCK`**. `SCL` wird normalerweise für I²C verwendet.
 
-## 8.1 Eigenschaften
+## 7.1 Eigenschaften
 
 - synchron
 - **Full Duplex** durch getrennte Leitungen `MOSI` und `MISO`
@@ -577,7 +541,7 @@ Signale:
 - jeder Slave benötigt normalerweise eine eigene `CS`-Leitung
 - keine Busadresse wie bei I²C
 
-## 8.2 Ablauf
+## 7.2 Ablauf
 
 1. Controller setzt `CS` des gewünschten Slaves auf LOW.
 2. Controller erzeugt den Takt auf `SCLK`.
@@ -592,7 +556,7 @@ Typische Anwendungen:
 - schnelle ADCs
 - Sensoren mit hoher Datenrate
 
-## 8.3 Typische Fehler
+## 7.3 Typische Fehler
 
 - `MOSI` und `MISO` vertauscht
 - falsche `CS`-Leitung
@@ -605,8 +569,8 @@ Typische Anwendungen:
 
 ---
 
-<a id="kapitel-9"></a>
-## 9. UART
+<a id="kapitel-8"></a>
+## 8. UART
 
 **UART** steht für **Universal Asynchronous Receiver/Transmitter**.
 
@@ -616,7 +580,7 @@ Der ESP verwendet UART unter anderem zum:
 - Ausgeben serieller Debug-Nachrichten
 - Kommunizieren mit GPS-, GSM- oder anderen seriellen Modulen
 
-## 9.1 Leitungen
+## 8.1 Leitungen
 
 Für die eigentliche Datenkommunikation:
 
@@ -634,7 +598,7 @@ GND        ↔ GND
 
 `TX` wird also **gekreuzt** mit `RX`. Eine Versorgungsleitung kann zusätzlich nötig sein, zählt aber nicht zum UART-Datensignal selbst.
 
-## 9.2 Asynchron
+## 8.2 Asynchron
 
 UART besitzt keine separate Clock-Leitung. Beide Seiten müssen dieselben Parameter verwenden:
 
@@ -654,13 +618,13 @@ Ein UART-Frame enthält typischerweise:
 3. optionales Paritätsbit
 4. Stopbit(s)
 
-## 9.3 Kommunikationsrichtungen
+## 8.3 Kommunikationsrichtungen
 
 - **Simplex:** nur eine Richtung
 - **Half Duplex:** beide Richtungen, aber nicht gleichzeitig
 - **Full Duplex:** beide Richtungen gleichzeitig; mit getrennten `TX`- und `RX`-Leitungen möglich
 
-## 9.4 Typische Fehler
+## 8.4 Typische Fehler
 
 - `TX` mit `TX` statt mit `RX` verbunden
 - gemeinsames `GND` fehlt
