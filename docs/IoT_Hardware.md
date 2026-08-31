@@ -1,6 +1,6 @@
 # IoT-Hardware – Lernnotizen
 
-> Ziel: Die vielen Einzelinformationen als zusammenhängenden Weg verstehen:  
+> Ziel:  
 > **physikalische Umwelt → Sensor → Mikrocontroller/Firmware → Bus/WLAN → Protokoll → Server/Broker → Speicherung/UI → Aktor**
 
 ---
