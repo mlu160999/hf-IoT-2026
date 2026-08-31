@@ -1,7 +1,5 @@
 # IoT-Hardware – Lernnotizen
 
-**Quellen:** `smartlearn.pdf`, `controllerboards.pdf`, `esp8266.pdf`, `esp32.pdf`, `gpio.pdf`, `l2C Bus.pdf` (gemeint ist **I2C Bus**), `spi bus.pdf`, `uart.pdf`
-
 > Ziel: Die vielen Einzelinformationen als zusammenhängenden Weg verstehen:  
 > **physikalische Umwelt → Sensor → Mikrocontroller/Firmware → Bus/WLAN → Protokoll → Server/Broker → Speicherung/UI → Aktor**
 
@@ -710,8 +708,6 @@ Ein UART-Frame enthält typischerweise:
 
 <a id="kapitel-11"></a>
 ## 11. Controllerboards sinnvoll auswählen
-
-Der Artikel `controllerboards.pdf` vergleicht zahlreiche Boards. Die Preisangaben stammen aus 2023 und sind daher **keine aktuellen Marktpreise**. Wichtig ist die Auswahlmethode.
 
 ## 11.1 Auswahlkriterien
 
