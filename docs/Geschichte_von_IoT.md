@@ -17,9 +17,7 @@
 9. [Chancen des IoT](#kapitel-9)
 10. [Risiken und Schattenseiten](#kapitel-10)
 11. [Einordnung der Geschichte](#kapitel-11)
-12. [Mögliche Portfolio-Antwort](#kapitel-12)
-13. [Häufige Verständnisfehler](#kapitel-13)
-14. [Exam Notes / Prüfungsnotizen](#exam-notes)
+
 
 ---
 
@@ -474,78 +472,3 @@ Milliarden Geräte benötigen:
 Kurze Produktlebensdauer oder fehlende Softwareupdates erhöhen den Elektroschrott.
 
 ---
-
-<a id="kapitel-11"></a>
-# 11. Einordnung der Geschichte
-
-Die Geschichte des IoT kann als Entwicklung von isolierten Maschinen zu vernetzten, datenbasierten Systemen verstanden werden:
-
-```text
-Mechanisierung
-      ↓
-Elektrifizierung
-      ↓
-Automatisierung
-      ↓
-Vernetzung
-      ↓
-Internet of Things
-      ↓
-Big Data und künstliche Intelligenz
-```
-
-Dabei baut jede Stufe auf früheren technischen Entwicklungen auf.
-
-IoT ist gleichzeitig:
-
-- das Ergebnis früherer Erfindungen,
-- eine Plattform für neue Anwendungen,
-- ein Auslöser weiterer technischer und gesellschaftlicher Veränderungen.
-
----
-
-<a id="kapitel-12"></a>
-# 12. Mögliche Portfolio-Antwort
-
-## Wohin geht die IoT-Reise?
-
-Das Internet of Things wird sich wahrscheinlich weiter ausbreiten. Immer mehr Alltagsgegenstände, Fahrzeuge, Maschinen und Infrastrukturen werden Sensoren, Software und Netzwerkverbindungen enthalten. Der wichtigste Nutzen wird nicht allein darin liegen, möglichst viele Geräte zu verbinden. Entscheidend wird sein, aus den entstehenden Daten zuverlässige und nützliche Informationen zu gewinnen.
-
-Big Data und künstliche Intelligenz können dabei helfen, Fehler vorherzusagen, Energie zu sparen, Verkehrsflüsse zu optimieren oder medizinische Veränderungen frühzeitig zu erkennen. Gleichzeitig steigen die Anforderungen an Datenschutz, IT-Sicherheit und Nachhaltigkeit. Ein IoT-System sollte deshalb nicht nur technisch funktionieren, sondern auch sicher, transparent, reparierbar und langfristig wartbar sein.
-
-Meiner Meinung nach wird sich IoT besonders dort durchsetzen, wo es ein konkretes Problem löst. Ein vernetztes Gerät ohne erkennbaren Nutzen erzeugt lediglich zusätzliche Kosten, Daten und Sicherheitsrisiken. Erfolgreiches IoT muss den Menschen unterstützen und darf ihn nicht unnötig überwachen oder vollständig von einem einzelnen Cloud-Anbieter abhängig machen.
-
----
-
-<a id="kapitel-13"></a>
-# 13. Häufige Verständnisfehler
-
-1. **IoT wurde nicht an einem einzigen Tag erfunden.** Es entstand aus vielen Entwicklungen.
-2. Der Internet-Toaster war ein früher Demonstrator, aber noch kein verbreitetes Alltagsprodukt.
-3. **Kevin Ashton** machte den Begriff **Internet of Things** im Jahr **1999** bekannt.
-4. RFID-Tags sind nicht automatisch selbst direkt mit dem Internet verbunden.
-5. Mehr gesammelte Daten bedeuten nicht automatisch bessere Entscheidungen.
-6. Vernetzung allein macht ein Gerät nicht intelligent.
-7. IoT besteht nicht nur aus Smart-Home-Geräten; es umfasst auch Industrie, Medizin, Landwirtschaft und Infrastruktur.
-8. Sicherheit und Datenschutz müssen schon beim Entwurf berücksichtigt werden.
-9. Historische Gerätezahlen aus Präsentationen sind zeitabhängige Schätzungen, keine dauerhaften Fakten.
-
----
-
-<a id="exam-notes"></a>
-# Exam Notes / Prüfungsnotizen
-
-## Unbedingt merken
-
-- IoT besitzt **kein genaues Geburtsjahr**.
-- Vier zentrale Meilensteine: **Mechanisierung, Elektrifizierung, Automatisierung, Vernetzung**.
-- **1990:** John Romkey und Simon Hackett verbinden einen Toaster mit dem Internet.
-- **1999:** Kevin Ashton macht den Begriff **Internet of Things** bekannt.
-- Ausgangsproblem bei Procter & Gamble: Ein Lippenstift war im Lager vorhanden, aber im Regal nicht verfügbar.
-- Ashtons Lösungsidee: Produktbestand mithilfe von **RFID** elektronisch erkennen und mit der Lieferkette verbinden.
-- **RFID:** Radio-Frequency Identification.
-- IoT verbindet **physische Dinge, Sensoren/Aktoren, Software und Netzwerke**.
-- Zukunft: mehr vernetzte Geräte, Big Data, KI und bessere Entscheidungsunterstützung.
-- Chancen: Automatisierung, Effizienz, Komfort, frühzeitige Fehlererkennung.
-- Risiken: Datenschutz, Cyberangriffe, Abhängigkeit, Arbeitsplatzveränderung und Elektroschrott.
-- Der eigentliche Nutzen entsteht nicht durch möglichst viele Daten, sondern durch **zuverlässige Auswertung und sinnvolle Handlungen**.
