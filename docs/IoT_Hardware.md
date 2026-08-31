@@ -1,7 +1,5 @@
 # IoT-Hardware – Lernnotizen
 
-**Quellen:** `smartlearn.pdf`, `controllerboards.pdf`, `esp8266.pdf`, `esp32.pdf`, `gpio.pdf`, `l2C Bus.pdf` (gemeint ist **I2C Bus**), `spi bus.pdf`, `uart.pdf`
-
 > Ziel: Die vielen Einzelinformationen als zusammenhängenden Weg verstehen:  
 > **physikalische Umwelt → Sensor → Mikrocontroller/Firmware → Bus/WLAN → Protokoll → Server/Broker → Speicherung/UI → Aktor**
 
