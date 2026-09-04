@@ -488,14 +488,3 @@ Der Versuch zeigt, wie eine Dezimalzahl mit vier digitalen Ausgängen binär dar
 Der Zähler funktioniert lokal auf dem ESP32 und kann sowohl direkt am ACEBOTT-Board als auch über die ESPHome-Weboberfläche bedient werden. Das Display zeigt den Dezimalwert, während die LEDs denselben Wert als vierstellige Binärzahl darstellen.
 
 ---
-
-## Prüfungsnotizen
-
-- Vier Bits ergeben $2^4 = 16$ Zustände: `0` bis `15`.
-- `LED1 = 1`, `LED2 = 2`, `LED3 = 4`, `LED4 = 8`.
-- Der bitweise Operator `&` prüft, ob ein bestimmtes Bit gesetzt ist.
-- K1 erhöht und K2 vermindert den Zähler.
-- Der Dezimalwert wird auf dem TM1637 angezeigt.
-- Die vier LEDs zeigen denselben Wert binär.
-- `restore_value: no` setzt den Zähler nach einem Neustart wieder auf 0.
-- Implementierter Wrap-around: `15 → 0` und `0 → 15`.
